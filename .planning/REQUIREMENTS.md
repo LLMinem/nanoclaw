@@ -115,46 +115,46 @@ Explicitly excluded. Documented to prevent scope creep.
 
 Which phases cover which requirements. Updated during roadmap creation.
 
-| Requirement | Phase | Status  |
-| ----------- | ----- | ------- |
-| SETUP-01    | —     | Pending |
-| SETUP-02    | —     | Pending |
-| SETUP-03    | —     | Pending |
-| SETUP-04    | —     | Pending |
-| TELE-01     | —     | Pending |
-| TELE-02     | —     | Pending |
-| TELE-03     | —     | Pending |
-| TELE-04     | —     | Pending |
-| TELE-05     | —     | Pending |
-| TELE-06     | —     | Pending |
-| TELE-07     | —     | Pending |
-| IDENT-01    | —     | Pending |
-| IDENT-02    | —     | Pending |
-| IDENT-03    | —     | Pending |
-| IDENT-04    | —     | Pending |
-| MEM-01      | —     | Pending |
-| MEM-02      | —     | Pending |
-| MEM-03      | —     | Pending |
-| MEM-04      | —     | Pending |
-| MEM-05      | —     | Pending |
-| MEM-06      | —     | Pending |
-| VOICE-01    | —     | Pending |
-| VOICE-02    | —     | Pending |
-| VOICE-03    | —     | Pending |
-| CLI-01      | —     | Pending |
-| CLI-02      | —     | Pending |
-| MAINT-01    | —     | Pending |
-| MAINT-02    | —     | Pending |
-| MAINT-03    | —     | Pending |
-| MAINT-04    | —     | Pending |
+| Requirement | Phase   | Status  |
+| ----------- | ------- | ------- |
+| SETUP-01    | Phase 1 | Pending |
+| SETUP-02    | Phase 1 | Pending |
+| SETUP-03    | Phase 1 | Pending |
+| SETUP-04    | Phase 1 | Pending |
+| TELE-01     | Phase 1 | Pending |
+| TELE-02     | Phase 1 | Pending |
+| TELE-03     | Phase 1 | Pending |
+| TELE-04     | Phase 1 | Pending |
+| TELE-05     | Phase 1 | Pending |
+| TELE-06     | Phase 5 | Pending |
+| TELE-07     | Phase 5 | Pending |
+| IDENT-01    | Phase 2 | Pending |
+| IDENT-02    | Phase 2 | Pending |
+| IDENT-03    | Phase 2 | Pending |
+| IDENT-04    | Phase 2 | Pending |
+| MEM-01      | Phase 3 | Pending |
+| MEM-02      | Phase 3 | Pending |
+| MEM-03      | Phase 3 | Pending |
+| MEM-04      | Phase 3 | Pending |
+| MEM-05      | Phase 3 | Pending |
+| MEM-06      | Phase 2 | Pending |
+| VOICE-01    | Phase 4 | Pending |
+| VOICE-02    | Phase 4 | Pending |
+| VOICE-03    | Phase 4 | Pending |
+| CLI-01      | Phase 5 | Pending |
+| CLI-02      | Phase 5 | Pending |
+| MAINT-01    | Phase 6 | Pending |
+| MAINT-02    | Phase 6 | Pending |
+| MAINT-03    | Phase 6 | Pending |
+| MAINT-04    | Phase 6 | Pending |
 
 **Coverage:**
 
 - v1 requirements: 30 total
-- Mapped to phases: 0
-- Unmapped: 30
+- Mapped to phases: 30
+- Unmapped: 0
 
 ---
 
 _Requirements defined: 2026-04-12_
-_Last updated: 2026-04-12 after initial definition_
+_Last updated: 2026-04-12 after roadmap creation_
