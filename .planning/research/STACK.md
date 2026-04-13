@@ -156,7 +156,7 @@ nvm use 22
 # Clone fork
 git clone git@github.com:LLMinem/nanoclaw.git ~/nanoclaw
 cd ~/nanoclaw
-git checkout meeq-claw
+# main is the working branch (standard fork workflow)
 
 # Install host dependencies
 npm install

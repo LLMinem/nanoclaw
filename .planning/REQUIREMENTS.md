@@ -12,7 +12,7 @@ Requirements for initial release. Each maps to roadmap phases.
 - [ ] **SETUP-01**: NanoClaw deployed and running on VPS (Ubuntu 24.04, Hetzner CX32) via systemd service
 - [ ] **SETUP-02**: Docker container image builds successfully on VPS
 - [ ] **SETUP-03**: OneCLI credential management configured and verified (Claude subscription token)
-- [ ] **SETUP-04**: Repository pushed to VPS, meeq-claw branch checked out and active
+- [ ] **SETUP-04**: Repository cloned on VPS, `main` branch checked out and active
 
 ### Telegram Channel
 

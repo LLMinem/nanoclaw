@@ -35,13 +35,12 @@ Decimal phases appear between their surrounding integers in numeric order.
 4. NanoClaw service restarts automatically after VPS reboot (systemd persistence)
 5. Container image builds and runs successfully on VPS (Docker verified)
 
-**Plans:** 3 plans
+**Execution approach:** Run NanoClaw skills interactively on the VPS, one session per skill:
 
-Plans:
-
-- [ ] 01-01-PLAN.md — Merge add-telegram and channel-formatting skill branches, build and test
-- [ ] 01-02-PLAN.md — Build Docker container image, install and configure OneCLI credentials
-- [ ] 01-03-PLAN.md — Configure Telegram bot, create systemd service, register main group, verify end-to-end
+1. `/setup` — Install dependencies, build container, configure timezone and environment
+2. `/add-telegram` — Merge Telegram channel code, collect bot token, configure
+3. `/init-onecli` — Install OneCLI credential gateway, register Anthropic OAuth token
+4. Manual: Create systemd service, register main group, set up sender allowlist, verify e2e
 
 ### Phase 2: Workspace Architecture & Identity
 
@@ -112,11 +111,11 @@ Plans:
 **Execution Order:**
 Phases execute in numeric order: 1 → 2 → 3 → 4 → 5 → 6
 
-| Phase                                | Plans Complete | Status      | Completed |
-| ------------------------------------ | -------------- | ----------- | --------- |
-| 1. VPS Deployment & Telegram Channel | 0/3            | Planned     | -         |
-| 2. Workspace Architecture & Identity | 0/?            | Not started | -         |
-| 3. Memory Migration                  | 0/?            | Not started | -         |
-| 4. Voice Transcription               | 0/?            | Not started | -         |
-| 5. CLI & Telegram Polish             | 0/?            | Not started | -         |
-| 6. Maintenance & Operations          | 0/?            | Not started | -         |
+| Phase                                | Status      | Completed |
+| ------------------------------------ | ----------- | --------- |
+| 1. VPS Deployment & Telegram Channel | Not started | -         |
+| 2. Workspace Architecture & Identity | Not started | -         |
+| 3. Memory Migration                  | Not started | -         |
+| 4. Voice Transcription               | Not started | -         |
+| 5. CLI & Telegram Polish             | Not started | -         |
+| 6. Maintenance & Operations          | Not started | -         |

@@ -87,7 +87,7 @@ What needs to be built or configured for v1:
 - Sync: Obsidian Headless on VPS syncs vault across iPhone, MacBook, VPS
 - Vault: `~/vaults/meeq-vault/` — the Obsidian vault, synced across devices
 - Fork: github.com/LLMinem/nanoclaw (origin), qwibitai/nanoclaw (upstream)
-- Branch: `meeq-claw` (all work happens here, `main` tracks upstream)
+- Branch: `main` (all work happens here; `upstream` remote tracks qwibitai/nanoclaw)
 
 **Workspace architecture (open):** Memory files should live in the Obsidian vault for cross-device visibility. Core workspace files may live in the vault or separately. Git for memory version history alongside Obsidian Sync is desired but needs research. Agent tooling (`.claude/` sessions, SQLite, IPC) stays inside containers. Multiple bind mounts can cleanly separate concerns. Final architecture requires a dedicated research + decision phase.
 
@@ -98,7 +98,7 @@ What needs to be built or configured for v1:
 - **Container**: Docker on Linux (native, no VM overhead)
 - **SDK**: Claude Agent SDK (must stay subscription-compatible)
 - **Channel**: Telegram primary (sole channel for v1)
-- **Branch**: All work on `meeq-claw` branch; `main` tracks upstream
+- **Branch**: All work on `main` branch; `upstream` remote tracks upstream NanoClaw (fetch-only)
 - **Learning**: Changes must be understood, not just applied — this is a learning project
 - **Credentials**: OneCLI gateway (setup default)
 

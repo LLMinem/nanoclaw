@@ -45,7 +45,7 @@ MeeqClaw is a customization layer on top of NanoClaw's existing event-driven arc
 │  ┌──────────────────────────────────────────────────────────────────┐   │
 │  │                   Filesystem Layout                              │   │
 │  │                                                                  │   │
-│  │  ~/nanoclaw/                 NanoClaw installation (meeq-claw)  │   │
+│  │  ~/nanoclaw/                 NanoClaw installation (main branch) │   │
 │  │  ~/vaults/meeq-vault/       Obsidian vault (synced)             │   │
 │  │    └── fritz/                Fritz workspace inside vault        │   │
 │  │        ├── SOUL.md           Fritz personality (version ctrl'd)  │   │
@@ -411,21 +411,20 @@ Skills are Claude Code slash commands defined in `.claude/skills/`. They are NOT
 
 2. **Container-side skills** (`container/skills/`): Runtime instructions synced into each container's `.claude/skills/` directory. These provide in-container capabilities like browser automation, status reporting. Synced by `container-runner.ts` at container spawn time.
 
-**Customization workflow for meeq-claw:**
+**Customization workflow (standard fork pattern):**
 
 ```
-main branch     → tracks upstream (qwibitai/nanoclaw)
-meeq-claw branch → all customizations live here
+main branch     → all customizations live here (your working branch)
+upstream remote → tracks qwibitai/nanoclaw (fetch-only, no push)
 
 # To add a feature:
-git checkout meeq-claw
-# Run the skill: /add-telegram, /add-voice-transcription, etc.
-# The skill merges its branch and modifies code
-# Commit the result to meeq-claw
+# Run the skill interactively: /add-telegram, /add-voice-transcription, etc.
+# The skill merges its branch and modifies code on main
+# Commit the result
 
 # To get upstream updates:
-git checkout main && git pull upstream main
-git checkout meeq-claw && git merge main
+git fetch upstream
+git merge upstream/main
 ```
 
 **Confidence:** HIGH — Verified by reading the add-telegram SKILL.md and the container-runner.ts skill sync code.
@@ -507,7 +506,7 @@ Create daily memory files in memory/ for important interactions.
 
 ## Anti-Patterns to Avoid
 
-### Anti-Pattern 1: Modifying NanoClaw Core on meeq-claw
+### Anti-Pattern 1: Modifying NanoClaw Core Directly
 
 **What:** Directly editing files in `src/` that are part of upstream NanoClaw.
 

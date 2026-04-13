@@ -36,8 +36,8 @@ Deploy NanoClaw on the Hetzner VPS (Ubuntu 24.04, CX32), install the Telegram ch
 
 ### Skill Installation
 
-- **D-13:** `add-telegram` skill merged into meeq-claw branch (provides Telegram channel module)
-- **D-14:** `channel-formatting` skill merged into meeq-claw branch (Markdown to Telegram native syntax)
+- **D-13:** `add-telegram` skill applied via interactive skill workflow on VPS (provides Telegram channel module)
+- **D-14:** `channel-formatting` skill applied via interactive skill workflow on VPS (Markdown to Telegram native syntax)
 
 ### The Agent's Discretion
 

@@ -174,7 +174,7 @@ Phase 2 (Memory Migration) — do a search-and-replace pass on every migrated fi
 ### Pitfall 7: Upstream Sync Destroys Customizations Via Rebase
 
 **What goes wrong:**
-Using `git rebase upstream/main` instead of `git merge upstream/main` rewrites the commit history of the `meeq-claw` branch. If the branch has already been pushed to `origin`, rebasing requires a force push. Force pushing while another session (or Claude Code itself) has the old history checked out causes divergent states. More practically: rebase resolves conflicts per-commit (potentially dozens of times for a large upstream update) while merge resolves them once.
+Using `git rebase upstream/main` instead of `git merge upstream/main` rewrites the commit history of the `main` branch. If the branch has already been pushed to `origin`, rebasing requires a force push. Force pushing while another session (or Claude Code itself) has the old history checked out causes divergent states. More practically: rebase resolves conflicts per-commit (potentially dozens of times for a large upstream update) while merge resolves them once.
 
 The `update-nanoclaw` skill offers rebase as an option but warns about it. A beginner developer might choose rebase thinking "linear history is better" without understanding the implications.
 
@@ -190,7 +190,7 @@ Rebase is seductive — cleaner history, no merge commits. But for a fork that p
 
 **Warning signs:**
 
-- `git status` shows "Your branch and 'origin/meeq-claw' have diverged" after an upstream sync.
+- `git status` shows "Your branch and 'origin/main' have diverged" after an upstream sync.
 - `git log` shows your customization commits interleaved with upstream commits (sign of rebase).
 - Force push prompts when trying to push.
 
@@ -268,7 +268,7 @@ Things that appear complete but are missing critical pieces.
 - [ ] **Service running:** `systemctl --user status nanoclaw` shows "active" but bot doesn't respond — check `logs/nanoclaw.log` for channel connection errors, not just service status
 - [ ] **Container builds:** `docker build` succeeds but agent fails at runtime — verify the agent-runner `npm install` inside the container completed (check for `node_modules` in build output)
 - [ ] **Upstream sync done:** `git merge upstream/main` completed without conflicts but bot behavior changed — check `CHANGELOG.md` for `[BREAKING]` entries that require running migration skills
-- [ ] **Fork pushed:** Local changes committed but not pushed to `origin/meeq-claw` — the VPS deployment pulls from origin, not your local machine
+- [ ] **Fork pushed:** Local changes committed but not pushed to `origin/main` — the VPS deployment pulls from origin, not your local machine
 - [ ] **`.env` synced to container env:** Changes to `.env` don't take effect until `mkdir -p data/env && cp .env data/env/env` AND service restart
 
 ## Recovery Strategies
