@@ -34,7 +34,14 @@ Decimal phases appear between their surrounding integers in numeric order.
 3. Only meeq's messages trigger the bot — messages from other users in a group are ignored
 4. NanoClaw service restarts automatically after VPS reboot (systemd persistence)
 5. Container image builds and runs successfully on VPS (Docker verified)
-   **Plans**: TBD
+
+**Plans:** 3 plans
+
+Plans:
+
+- [ ] 01-01-PLAN.md — Merge add-telegram and channel-formatting skill branches, build and test
+- [ ] 01-02-PLAN.md — Build Docker container image, install and configure OneCLI credentials
+- [ ] 01-03-PLAN.md — Configure Telegram bot, create systemd service, register main group, verify end-to-end
 
 ### Phase 2: Workspace Architecture & Identity
 
@@ -107,7 +114,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5 → 6
 
 | Phase                                | Plans Complete | Status      | Completed |
 | ------------------------------------ | -------------- | ----------- | --------- |
-| 1. VPS Deployment & Telegram Channel | 0/?            | Not started | -         |
+| 1. VPS Deployment & Telegram Channel | 0/3            | Planned     | -         |
 | 2. Workspace Architecture & Identity | 0/?            | Not started | -         |
 | 3. Memory Migration                  | 0/?            | Not started | -         |
 | 4. Voice Transcription               | 0/?            | Not started | -         |
